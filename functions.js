@@ -4,7 +4,9 @@ Output:
 */
 
 export function greetUsers(customers) {
-    return true;
+    return customers
+        .filter(item => item.first_name)
+        .map(item => `Hello Customers ${item.first_name} ${item.last_name}`);
 }
 
 /* 

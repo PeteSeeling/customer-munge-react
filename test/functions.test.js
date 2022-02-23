@@ -1,17 +1,65 @@
 // IMPORT MODULES under test here:
 import { 
     greetUsersOverAge60,
+    greetUsers,
 } from '../functions.js';
 import customers from './data.js';
 
 const { test, skip } = QUnit;
 
-skip('greetUsers', (expect) => {
-    const expected = true;
+test('greetUsers', (expect) => {
+    const expected = 	
+    [
+        'Hello Customers Suzi Summerson',
+        'Hello Customers Boot Penton',
+        'Hello Customers Cacilia Caramuscia',
+        'Hello Customers Mattie Mungane',
+        'Hello Customers Kathryne Gostling',
+        'Hello Customers Cristal Oakman',
+        'Hello Customers Mahmud Shingler',
+        'Hello Customers Kenny Kepe',
+        'Hello Customers Elena Guisby',
+        'Hello Customers Irene Kynvin',
+        'Hello Customers Debor Lashmar',
+        'Hello Customers Christian Churchill',
+        'Hello Customers Fawnia Cowdroy',
+        'Hello Customers Eli Perigo',
+        'Hello Customers Parker Goodboddy',
+        'Hello Customers Leeland Bonome',
+        'Hello Customers Lowe Driussi',
+        'Hello Customers Tracy Chidlow',
+        'Hello Customers Dimitri Ochiltree',
+        'Hello Customers Sascha Yanin',
+        'Hello Customers Emmaline Horribine',
+        'Hello Customers Erinna Swires',
+        'Hello Customers Erroll Reade',
+        "Hello Customers Ilaire O'Codihie",
+        'Hello Customers Anatol Gulley',
+        'Hello Customers Celestine Teodori',
+        'Hello Customers Brandi Sawdon',
+        'Hello Customers Atlanta Oneil',
+        'Hello Customers Salomone Merkle',
+        'Hello Customers Alta Sulter',
+        'Hello Customers Marys Allsopp',
+        'Hello Customers Marilin Ellacott',
+        'Hello Customers Alexandros Cornell',
+        'Hello Customers Matti Haller',
+        'Hello Customers Henryetta Cheng',
+        'Hello Customers Gennie Saura',
+        'Hello Customers Sherwynd Wiggans',
+        'Hello Customers Thorn McMeekin',
+        'Hello Customers Esmaria Moukes',
+        'Hello Customers Dietrich Gladebeck',
+        'Hello Customers Karol Rosa',
+        'Hello Customers Manya Fodden',
+        'Hello Customers Casi Waterland',
+        'Hello Customers Munroe Walthall',
+        'Hello Customers Tannie Sedman'
+    ];
 
-    const actual = greetUsers();
+    const actual = greetUsers(customers);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
 
