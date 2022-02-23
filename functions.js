@@ -1,3 +1,5 @@
+
+
 /* 
 Output: 
 ['Hello Suzie Summerson!', 'Hello Cacilia Caramuscia', 'Hello Mattie Mungane' etc]
@@ -29,9 +31,14 @@ Output:
 */
 
 export function addAllAges(customers) {
-    return true;
-}
 
+
+    const sum = customers.reduce((accumulator, currentPerson) => {
+        const numberSoFar = accumulator + currentPerson.age;
+        console.log(sum);
+        return numberSoFar;
+    }, 0);
+}
 /* 
 Output: 
 4.5
