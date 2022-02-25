@@ -48,7 +48,10 @@ Output:
 
 export function getAverageCoolFactor(customers) {
     const coolTotal = customers.reduce((acc, customers) => acc + customers.cool_factor, 0);
-    return coolTotal;
+      
+    return coolTotal / customers.length;
+
+   
 
  
 }
