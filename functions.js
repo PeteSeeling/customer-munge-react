@@ -31,14 +31,16 @@ Output:
 */
 
 export function addAllAges(customers) {
+    // const total = customers.reduce((acc, customers) => {const subTotal = acc + customers.age;
+    //     return subTotal;
+    // }, 0);
 
-
-    const sum = customers.reduce((accumulator, currentPerson) => {
-        const numberSoFar = accumulator + currentPerson.age;
-        console.log(sum);
-        return numberSoFar;
-    }, 0);
+    const total = customers.reduce((acc, customers) => acc + customers.age, 0);
+    return total;
 }
+
+
+
 /* 
 Output: 
 4.5
