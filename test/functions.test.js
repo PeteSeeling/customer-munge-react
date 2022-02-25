@@ -121,7 +121,7 @@ test('getTotalOfEachGender', (expect) => {
 
     const actual = getTotalOfEachGender(customers);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
 test('getGenderBreakdownOfFordOwners', (expect) => {
@@ -133,7 +133,7 @@ test('getGenderBreakdownOfFordOwners', (expect) => {
 
     const actual = getGenderBreakdownOfFordOwners(customers);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
 skip('getGenderBreakdownOfEachCar', (expect) => {
