@@ -10,12 +10,10 @@ export function greetUsers(customers) {
         .filter(item => item.first_name)
         .map(item => `Hello Customers ${item.first_name} ${item.last_name}`);
 }
-
 /* 
 Output: 
 ['Hello Suzie Summerson!', 'Hello Cacilia Caramuscia', etc]
 */
-
 export function greetUsersOverAge60(customers) {
     return customers
         // first, filter over the user to get the ones over 60
@@ -23,39 +21,25 @@ export function greetUsersOverAge60(customers) {
         // then map over them to make a greeting
         .map(item => `Hello ${item.first_name} ${item.last_name}!`);
 }
-
-
 /* 
 Output: 
 4532
 */
-
 export function addAllAges(customers) {
     // const total = customers.reduce((acc, customers) => {const subTotal = acc + customers.age;
     //     return subTotal;
     // }, 0);
-
     const total = customers.reduce((acc, customers) => acc + customers.age, 0);
     return total;
 }
-
-
-
 /* 
 Output: 
 4.5
 */
-
 export function getAverageCoolFactor(customers) {
     const coolTotal = customers.reduce((acc, customers) => acc + customers.cool_factor, 0);
-      
     return coolTotal / customers.length;
-
-   
-
- 
 }
-
 /* 
 Output: 
 {
@@ -65,21 +49,17 @@ Output:
     etc . . .
 }
 */
-
 export function getTotalOfEachGender(customers) {
     const totalGender = customers.reduce((acc, customer)=>{
         if(acc[customer.gender]){
             acc[customer.gender]++;
-        }
-        else {
+        } else {
             acc[customer.gender] = 1;
         }
         return acc;
     }, {});
     return totalGender;
 }
-
-
 /* 
 Output: 
  {
@@ -89,7 +69,6 @@ Output:
     etc . . .
  }
 */
-
 export function getGenderBreakdownOfFordOwners(customers) {
     const fordOwners = customers.filter(customer => customer.car_make === 'Ford');
 
@@ -100,17 +79,12 @@ export function getGenderBreakdownOfFordOwners(customers) {
             acc[customer.gender] = 1;
         }
         return acc;
-
     }, {});
     return fordGender;
 }
-    
-
-
 //////////////////////////////////////////////////////////
 ///////////// STRETCH GOALS /////////////////////////////
 /////////////////////////////////////////////////////////
-
 /* 
 Output: 
 {

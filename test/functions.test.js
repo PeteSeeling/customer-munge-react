@@ -8,7 +8,6 @@ import {
     getGenderBreakdownOfFordOwners,
 } from '../functions.js';
 import customers from './data.js';
-
 const { test, skip } = QUnit;
 
 test('greetUsers', (expect) => {
@@ -66,7 +65,6 @@ test('greetUsers', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-
 test('greetUsersOverAge60', (expect) => {
     const expected = [
         'Hello Suzi Summerson!',
@@ -93,17 +91,14 @@ test('greetUsersOverAge60', (expect) => {
 
 test('addAllAges', (expect) => {
     const expected = 2125;
-
     const actual = addAllAges(customers);
 
     expect.equal(actual, expected);
 });
 
-
 test('getAverageCoolFactor', (expect) => {
     const expected =
     5.088888888888889;
-
     const actual = getAverageCoolFactor(customers);
 
     expect.equal(actual, expected);
@@ -118,7 +113,6 @@ test('getTotalOfEachGender', (expect) => {
         'Male': 23,
         'Non-binary': 1
     };
-
     const actual = getTotalOfEachGender(customers);
 
     expect.deepEqual(actual, expected);
@@ -130,15 +124,12 @@ test('getGenderBreakdownOfFordOwners', (expect) => {
     'Female': 1,
     'Male': 2
 };
-
     const actual = getGenderBreakdownOfFordOwners(customers);
-
     expect.deepEqual(actual, expected);
 });
 
 skip('getGenderBreakdownOfEachCar', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -146,7 +137,6 @@ skip('getGenderBreakdownOfEachCar', (expect) => {
 
 skip('getAllCoolFactorsOfEachCar', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -154,7 +144,6 @@ skip('getAllCoolFactorsOfEachCar', (expect) => {
 
 skip('getAverageCoolFactorOfEachCar', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -162,7 +151,6 @@ skip('getAverageCoolFactorOfEachCar', (expect) => {
 
 skip('getAverageCoolFactor', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -170,7 +158,6 @@ skip('getAverageCoolFactor', (expect) => {
 
 skip('getAverageCoolFactor', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -178,7 +165,6 @@ skip('getAverageCoolFactor', (expect) => {
 
 skip('getCoolFactorsByAgeBracket', (expect) => {
     const expected = true;
-
     const actual = greetUsers();
 
     expect.equal(actual, expected);
@@ -186,7 +172,6 @@ skip('getCoolFactorsByAgeBracket', (expect) => {
 
 skip('getAverageCoolFactorByAgeBracket', (expect) => {
     const expected = true;
-
     const actual = true;
 
     expect.equal(actual, expected);
